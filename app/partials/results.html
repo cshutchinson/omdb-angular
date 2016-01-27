@@ -1,9 +1,14 @@
 
-<div>
-  <p>movie results view</p>
-  <div ng-repeat="movie in movies">
-    <p>
-      {{movie.Title}}
-    </p>
+<!-- <div class="row views"> -->
+  <div ng-repeat="movie in movies | orderBy: '-Released'">
+    <div class="movie thumbnail">
+      <img ng-if="movie.Poster != 'N/A'" ng-src="{{movie.Poster}}" alt=""  width=120 />
+      <img class="img-responsive" ng-if="movie.Poster == 'N/A'" ng-src="http://media.wiley.com/spa_assets/R16B081/site/wiley2/cvo/images/placeholders/placeholder_100.gif" alt="" width=120 />
+      <div class="row row-fluid title text-center">
+        <div class="col-sm-8 col-sm-offset-2">
+        <a class="text-center title" ng-href="/#/details/{{movie.imdbID}}">{{movie.Title}}</a>
+      </div>
+      </div>
+    </div>
   </div>
-</div>
+<!-- </div> -->

@@ -1,5 +1,30 @@
+.views {
+  margin-left: 10%;
+}
+.row-fluid {
+    word-wrap: break-word;
+}
+
 .center {
   width: 600px;
   height: 200px;
   margin: 0 auto;
+}
+
+.movie {
+  width: 200px;
+  height: 260px;
+  float: left;
+  margin: 10px;
+  padding-top: 20px;
+}
+
+.title {
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+.divborder {
+  border: 2px solid gray;
+  border-radius: 25px;
 }
